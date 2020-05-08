@@ -17,7 +17,7 @@ data$Date <- as.Date(data$Date, format = "%d/%m/%Y")
 data$Time <- strptime(paste(data$Date, data$Time), format = "%Y-%m-%d %H:%M:%S")
 
 # Draw plot3 #
-png(file = "plot3.png")
+png(file = "plot3.png", width = 480, height = 480)
 par(mfrow = c(1,1))
 with(data, plot(Time, Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "n"))
 with(data, lines(Time, Sub_metering_1, col = "black"))
