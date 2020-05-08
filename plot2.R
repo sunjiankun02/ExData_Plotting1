@@ -17,7 +17,7 @@ data$Date <- as.Date(data$Date, format = "%d/%m/%Y")
 data$Time <- strptime(paste(data$Date, data$Time), format = "%Y-%m-%d %H:%M:%S")
 
 # Draw plot2 #
-png(file = "plot2.png")
+png(file = "plot2.png", width = 480, height = 480)
 par(mfrow = c(1,1))
 plot(data$Time, data$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
 dev.off()
